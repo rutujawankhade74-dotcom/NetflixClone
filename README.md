@@ -1,2 +1,2 @@
-# NetflixClone
-Detailed website of netflix
+# StudySphere
+Detailed website of StudySphere
