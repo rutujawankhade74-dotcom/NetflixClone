@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RUTZZ | Student Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+    <!-- Login Container -->
+    <div class="login-container">
+
+        <!-- Left Branding -->
+        <div class="brand-section">
+
+            <div class="brand-logo">
+                R
+            </div>
+
+            <h1>RUTZZ</h1>
+
+            <h3>Study Material</h3>
+
+            <p>
+                Smart Learning.<br>
+                Smart Future.
+            </p>
+
+            <div class="brand-features">
+
+                <div>📚 Easy Notes</div>
+
+                <div>⚡ Quick Revision</div>
+
+                <div>🎯 Exam Ready</div>
+
+                <div>🚀 Learn Anytime</div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Login Card -->
+        <div class="login-card">
+
+            <div class="login-icon">
+                🎓
+            </div>
+
+            <h2>Welcome Back!</h2>
+
+            <p class="login-subtitle">
+                Login to access your study material
+            </p>
+
+
+            <form onsubmit="login(event)">
+
+                <!-- Username -->
+                <div class="input-group">
+
+                    <label>Username</label>
+
+                    <div class="input-box">
+
+                        <span>👤</span>
+
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Enter username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="input-group">
+
+                    <label>Password</label>
+
+                    <div class="input-box">
+
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            onclick="togglePassword()"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Remember -->
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input type="checkbox">
+
+                        Remember me
+
+                    </label>
+
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login Button -->
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+                    Login to RUTZZ
+                    <span>→</span>
+                </button>
+
+            </form>
+
+
+            <!-- Demo Credentials -->
+            <div class="demo-login">
+
+                <p>Demo Login</p>
+
+                <span>
+                    Username: <b>student</b>
+                </span>
+
+                <span>
+                    Password: <b>1234</b>
+                </span>
+
+            </div>
+
+
+            <div class="login-footer">
+
+                <span>Made for students 💜</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

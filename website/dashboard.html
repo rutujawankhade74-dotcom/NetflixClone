@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RUTZZ | Study Material</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">R</div>
+
+            <div>
+                <h2>RUTZZ</h2>
+                <p>Study Material</p>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <span class="student-name">👋 Hello, Student</span>
+
+            <button class="logout-btn" onclick="logout()">
+                Logout
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <span class="badge">
+                    🎓 AIML • 2nd Year
+                </span>
+
+                <h1>
+                    Study Smart.<br>
+                    <span>Score Better.</span>
+                </h1>
+
+                <p>
+                    Your complete study companion for notes,
+                    units and exam preparation.
+                </p>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="hero-icon">
+                    📚
+                </div>
+
+                <h3>Smart Learning</h3>
+
+                <p>
+                    Everything you need in one place.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Search -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span class="search-icon">🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search subject..."
+                    onkeyup="searchSubjects()"
+                >
+
+                <span class="shortcut">⌘ K</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Subject Heading -->
+        <div class="section-heading">
+
+            <div>
+                <span class="small-title">YOUR SUBJECTS</span>
+
+                <h2>
+                    Choose a subject
+                </h2>
+            </div>
+
+            <span class="subject-count">
+                6 Subjects
+            </span>
+
+        </div>
+
+
+        <!-- Subject Cards -->
+        <section class="subjects-grid" id="subjectsGrid">
+
+
+            <!-- DBMS -->
+            <div class="subject-card" data-subject="DBMS">
+
+                <div class="card-top">
+
+                    <div class="subject-icon dbms">
+                        🗄️
+                    </div>
+
+                    <span class="card-number">
+                        01
+                    </span>
+
+                </div>
+
+                <h3>Database Management System</h3>
+
+                <p>
+                    SQL, databases, normalization,
+                    transactions and more.
+                </p>
+
+                <div class="card-footer">
+
+                    <span>
+                        📖 5 Units
+                    </span>
+
+                    <button onclick="showUnits('DBMS')">
+                        View Notes →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DSA -->
+            <div class="subject-card" data-subject="DSA">
+
+                <div class="card-top">
+
+                    <div class="subject-icon dsa">
+                        🌳
+                    </div>
+
+                    <span class="card-number">
+                        02
+                    </span>
+
+                </div>
+
+                <h3>Data Structures & Algorithms</h3>
+
+                <p>
+                    Arrays, linked lists, trees,
+                    graphs and algorithms.
+                </p>
+
+                <div class="card-footer">
+
+                    <span>
+                        📖 5 Units
+                    </span>
+
+                    <button onclick="showUnits('DSA')">
+                        View Notes →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- OOP -->
+            <div class="subject-card" data-subject="OOP">
+
+                <div class="card-top">
+
+                    <div class="subject-icon oop">
+                        💻
+                    </div>
+
+                    <span class="card-number">
+                        03
+                    </span>
+
+                </div>
+
+                <h3>Object Oriented Programming</h3>
+
+                <p>
+                    Classes, objects, inheritance,
+                    polymorphism and abstraction.
+                </p>
+
+                <div class="card-footer">
+
+                    <span>
+                        📖 5 Units
+                    </span>
+
+                    <button onclick="showUnits('OOP')">
+                        View Notes →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI -->
+            <div class="subject-card" data-subject="AI">
+
+                <div class="card-top">
+
+                    <div class="subject-icon ai">
+                        🤖
+                    </div>
+
+                    <span class="card-number">
+                        04
+                    </span>
+
+                </div>
+
+                <h3>Foundation of Artificial Intelligence</h3>
+
+                <p>
+                    AI concepts, search techniques,
+                    agents and intelligent systems.
+                </p>
+
+                <div class="card-footer">
+
+                    <span>
+                        📖 5 Units
+                    </span>
+
+                    <button onclick="showUnits('AI')">
+                        View Notes →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- FML -->
+            <div class="subject-card" data-subject="FML">
+
+                <div class="card-top">
+
+                    <div class="subject-icon fml">
+                        🧠
+                    </div>
+
+                    <span class="card-number">
+                        05
+                    </span>
+
+                </div>
+
+                <h3>Foundation of Machine Learning</h3>
+
+                <p>
+                    Regression, classification,
+                    clustering and ML fundamentals.
+                </p>
+
+                <div class="card-footer">
+
+                    <span>
+                        📖 5 Units
+                    </span>
+
+                    <button onclick="showUnits('FML')">
+                        View Notes →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DELD -->
+            <div class="subject-card" data-subject="DELD">
+
+                <div class="card-top">
+
+                    <div class="subject-icon deld">
+                        ⚡
+                    </div>
+
+                    <span class="card-number">
+                        06
+                    </span>
+
+                </div>
+
+                <h3>Digital Electronics & Logic Design</h3>
+
+                <p>
+                    Logic gates, Boolean algebra,
+                    circuits and digital systems.
+                </p>
+
+                <div class="card-footer">
+
+                    <span>
+                        📖 5 Units
+                    </span>
+
+                    <button onclick="showUnits('DELD')">
+                        View Notes →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Units Area -->
+        <section id="units-section" class="units-section">
+
+            <div id="units">
+
+                <div class="empty-units">
+
+                    <div>
+                        📚
+                    </div>
+
+                    <h3>Select a subject</h3>
+
+                    <p>
+                        Choose a subject above to access your notes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            RUTZZ
+        </div>
+
+        <p>
+            Smart Learning. Smart Future. 💜
+        </p>
+
+        <span>
+            © 2026 RUTZZ Study Material
+        </span>
+
+    </footer>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>
